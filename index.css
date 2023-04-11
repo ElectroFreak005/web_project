@@ -1,5 +1,9 @@
 body{
 	margin:0;
+	background-color: black;
+}
+.head{
+	padding: 2%;
 }
 .main{
 	height:70vh;
@@ -7,10 +11,16 @@ body{
 	background-image:url("img5.jpg");
 	background-size: cover;
 }
+.sign-reg{
+	text-align: center;
+	padding: 3%;
+}
 h1{
 	margin:0;
 	text-align: center;
-	color: #3E54AC;
+	color: #E86A33;
+	background-color: black;
+	display: block;
 }
 table,td,th{
 	text-align: center;
@@ -20,4 +30,10 @@ table,td,th{
 	width: 70vw;
 	border: 3px solid #3E54AC;
 	border-collapse: collapse;
+}
+button{
+	padding: 1%;
+	border-style: solid;
+	border-radius: 10%;
+	text-decoration: solid;
 }
