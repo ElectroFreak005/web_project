@@ -7,17 +7,26 @@
     <title>Document</title>
     <style>
         div{
+            justify-content: center;
             text-align: center;
-            margin: 15%;
+            margin: auto;
             border-style:solid;
             border-width: 5px;
             border-color: black;
+            background-color: yellow;
+            width: 30vw;
+            height: 30vh;
+            padding: 50px;
+        }
+        label,input{
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <div>
-        <form action="/" name="signin">
+        <h1 style="display: block;">Login Here</h1>
+        <form action="/mainpage.html" name="signin">
             <label for="1">Enter Email: </label><input type="email" name="email" id="1"><br><br>
             <label for="2">Enter Password: </label><input type="password" name="pwd" id="2"><br><br>
             <input type="submit" name="submit" id="3">

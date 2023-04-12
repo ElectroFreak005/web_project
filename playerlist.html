@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>PlayerList</title>
+    <style>
+        table,tr,td{
+            margin: auto;
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <!-- <div>
+        <label for="1">Search players</label>
+        <input type="text" name="search" id="1" ng-model="search">
+    </div> -->
+    <div>
+        <table>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Nationality</th>
+                <th>Club</th>
+                <th>Club Logo</th>
+            </tr>
+            <tr ng-repeat="x in playerlist">
+                <td>{{x.sno}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.nationality}}</td>
+                <td>{{x.club}}</td>
+                <td><img class="img" src="{{x.img}}" alt=""></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+<script src="playerlist.js"></script>
+</html>
