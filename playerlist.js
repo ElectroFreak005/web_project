@@ -8,3 +8,4 @@ app.controller("myCtrl",function($scope){
         {sno:"5",name:"Robert Lewandowski",nationality:"Poland",club:"Barcelona FC",img:"la-liga/barcelona.png"}
     ];
 });
+

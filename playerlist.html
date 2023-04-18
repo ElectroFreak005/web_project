@@ -4,27 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Football Fantasy">
+    <meta name="keywords" content="football, fantasy, game">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>PlayerList</title>
     <style>
-        table,tr,td{
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #D8D8D8;
+        }
+        .mySlides {display: none;}
+        table,tr,td,th{
             margin: auto;
             text-align: center;
-            border: 1px solid black;
+            border: 3px solid black;
             border-collapse: collapse;
+            color:#000000;
+            font-family: 'Bebas Neue';
+            font-size: 1.05em;
+            padding: 20px;
         }
         .img{
             height: 100px;
             width: 100px;
         }
+        .carousel{
+            max-width: 1500px;
+            position: relative;
+            /* background-image: url("img10.jpg"); */
+            background-repeat: no-repeat;
+            margin: auto;
+        }
+        .main_heading{
+            text-align: center;
+            font-size:5em;
+            position: relative;
+            margin: auto;
+        }
+        .player_list{
+            margin: 50px;
+            background-color: #D8D8D8;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
     </style>
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
-    <!-- <div>
-        <label for="1">Search players</label>
-        <input type="text" name="search" id="1" ng-model="search">
-    </div> -->
-    <div>
+    <div class="carousel">
+        <!-- <p class="main_heading">Player List</p> -->
+        <div class="mySlides fade">
+            <img src="img14.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="mySlides fade">
+            <img src="img12.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="mySlides fade">
+            <img src="img13.jpg" alt="" style="width: 100%;">
+        </div>
+    </div>
+    <div class="player_list">
+        <h1 style="text-align: center;
+        font-family: 'Bebas Neue';">Top Players - Latest</h1>
         <table>
             <tr>
                 <th>Sno</th>
@@ -42,7 +93,30 @@
             </tr>
         </table>
     </div>
-    
+    <script>
+        var app = angular.module("myApp",[]);
+        app.controller("myCtrl",function($scope){
+            $scope.playerlist = [
+                {sno:"1",name:"Lionel Messi",nationality:"Argentina",club:"Paris-saint-germain",img:"french-ligue1/paris-saint-germain.png"},
+                {sno:"2",name:"Neymar",nationality:"Brazil",club:"Paris-saint-germain",img:"french-ligue1/paris-saint-germain.png"},
+                {sno:"3",name:"Marcus Rashford",nationality:"England",club:"Manchester-United",img:"premier-league/manchester-united.png"},
+                {sno:"4",name:"Kevin De Bruyne",nationality:"Belguim",club:"Manchester City",img:"premier-league/manchester-city.png"},
+                {sno:"5",name:"Robert Lewandowski",nationality:"Poland",club:"Barcelona FC",img:"la-liga/barcelona.png"}
+            ];
+        });
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+      </script>
 </body>
-<script src="playerlist.js"></script>
 </html>
