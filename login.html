@@ -4,32 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
-        div{
-            justify-content: center;
-            text-align: center;
-            margin: auto;
-            border-style:solid;
-            border-width: 5px;
-            border-color: black;
-            background-color: yellow;
-            width: 30vw;
-            height: 30vh;
-            padding: 50px;
+        header{
+            font-size: large;
+            /* background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
         }
-        label,input{
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: #004D98;
+            color: white;
+            font-family: "League Spartan";
+            background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            background-repeat: no-repeat;
+            height: 99vh;
+        }
+        div{
+            text-align: center;
+            margin: 13% auto;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .3);
+            width: 30vw;
+            background-clip: padding-box;
+            padding: 20px;
+        }
+        label{
             margin: 10px;
+            font-size: larger;
+            font-weight: bold;
+        }
+        input{
+            margin: 10px;
+            padding: 5px;
+            font-size: large;
+        }
+        table{
+            margin: auto;
+            text-align: left;
+            padding: 10px;
+        }
+        td{
+            padding: 10px;
+        }
+        .btn{
+            padding: 10px;
+            background-color: #FFED02;
+            font-weight: bold;
+            border: none;
+            border-radius: 1rem;
+            font-family: "League Spartan";
+        }
+        .btn:hover{
+            background-color: #EDBB00;
+            color: white;
         }
     </style>
 </head>
+<header>
+    <h1 style="text-align: center;">Welcome to Football Fantasy</h1>
+</header>
 <body>
     <div>
-        <h1 style="display: block;">Login Here</h1>
-        <form action="/mainpage.html" name="signin">
-            <label for="1">Enter Email: </label><input type="email" name="email" id="1"><br><br>
-            <label for="2">Enter Password: </label><input type="password" name="pwd" id="2"><br><br>
-            <input type="submit" name="submit" id="3">
+        <h1>Login Here</h1>
+        <table>
+            <form action="/mainpage.html" name="signin">
+            <tr>
+                <td>
+                    <label for="1">Enter Email: </label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="2">Enter Password: </label>
+                </td>
+                <td>
+                    <input type="password" name="pwd" id="2">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="submit" id="3" class="btn">
         </form>
     </div>
     
