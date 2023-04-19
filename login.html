@@ -12,24 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
-        header{
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            height: 50px;
             font-size: large;
+            padding: 10px;
             /* background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
         }
         body{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            /* display: flex;
+            flex-direction: column; */
+            /* justify-content: space-around; */
             background-color: #004D98;
-            color: white;
+            color: rgb(12, 3, 3);
             font-family: "League Spartan";
             background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
             background-repeat: no-repeat;
-            height: 99vh;
+            height: 100vh;
         }
-        div{
+        .login{
             text-align: center;
-            margin: 13% auto;
+            margin: 15% auto;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, .3);
             width: 30vw;
@@ -66,13 +72,32 @@
             background-color: #EDBB00;
             color: white;
         }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            display: block;
+            padding: 10px;
+        }
     </style>
 </head>
-<header>
-    <h1 style="text-align: center;">Welcome to Football Fantasy</h1>
-</header>
 <body>
-    <div>
+    <div class="header">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li style="float: right;"><a href="signup.html">Register</a></li>
+            <li style="float: right;"><a href="">Login</a></li>
+        </ul>
+        <!-- <h1 style="text-align: center;">Welcome to Football Fantasy</h1> -->
+    </div>
+    <hr>
+    <div class="login">
         <h1>Login Here</h1>
         <table>
             <form action="/mainpage.html" name="signin">
@@ -81,7 +106,7 @@
                     <label for="1">Enter Email: </label>
                 </td>
                 <td>
-                    <input type="email" name="email" id="1">
+                    <input type="email" name="email" id="1" required>
                 </td>
             </tr>
             <tr>
@@ -89,13 +114,22 @@
                     <label for="2">Enter Password: </label>
                 </td>
                 <td>
-                    <input type="password" name="pwd" id="2">
+                    <input type="password" name="pwd" id="2" required>
                 </td>
             </tr>
         </table>
-        <input type="submit" name="submit" id="3" class="btn">
+        <input type="submit" name="submit" id="3" class="btn" onclick="check">
         </form>
     </div>
-    
+    <script>
+        var empty = true;
+        var check = function(){
+            if(document.getElementById("1").innerHTML === "" && document.getElementById("2").innerHTML === ""){
+                alert("Please Fill all the fields");
+                return;
+            }
+        }
+        
+    </script>
 </body>
 </html>
