@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
     <title>Document</title>
+    <script type="text/javascript">
+        function validate(){
+            var cond = true;
+            var passele=document.getElementById("2");
+            var re=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+~`|}{[\]\\:;'<>,.?\/])(?!.*\s).{8,}$/;
+            if((!re.test(passele.value))){
+                alert('Password should be atleast 8 characters.\nMust have an lowercase, uppercase and a special character.');
+                cond = false;
+            }
+            else if(cond == true)
+            {
+                document.getElementsByTagName("body").scope.pass();
+            }
+        }
+
+    </script>
     <style>
         *{
             margin: 0;
@@ -100,7 +116,7 @@
     <div class="login">
         <h1>Login Here</h1>
         <table>
-            <form action="/mainpage.html" name="signin">
+            <form action="/mainpage.html" name="signin" onsubmit="return validate()">
             <tr>
                 <td>
                     <label for="1">Enter Email: </label>
@@ -118,18 +134,8 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" name="submit" id="3" class="btn" onclick="check">
+        <input type="submit" value="Submit" name="submit" id="3" class="btn">
         </form>
     </div>
-    <script>
-        var empty = true;
-        var check = function(){
-            if(document.getElementById("1").innerHTML === "" && document.getElementById("2").innerHTML === ""){
-                alert("Please Fill all the fields");
-                return;
-            }
-        }
-        
-    </script>
 </body>
 </html>

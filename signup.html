@@ -4,13 +4,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+    <title>Register</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            height: 50px;
+            font-size: large;
+            padding: 10px;
+            /* background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+        }
+        body{
+            /* display: flex;
+            flex-direction: column; */
+            /* justify-content: space-around; */
+            /* font-family: "Bebas Neue"; */
+            font-size: large;
+            background-color: #004D98;
+            color: rgb(12, 3, 3);
+            font-family: "League Spartan";
+            background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .register{
+            text-align: center;
+            margin: 10% auto;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .3);
+            width: 30vw;
+            background-clip: padding-box;
+            padding: 20px;
+            font-family: "League Spartan";
+        }
+        label{
+            margin: 10px;
+            font-size: larger;
+            font-weight: bold;
+        }
+        input{
+            margin: 10px;
+            padding: 5px;
+            font-size: large;
+        }
+        table{
+            margin: auto;
+            text-align: left;
+            padding: 10px;
+        }
+        td{
+            padding: 10px;
+        }
+        .btn{
+            padding: 10px;
+            background-color: #FFED02;
+            font-weight: bold;
+            border: none;
+            border-radius: 1rem;
+        }
+        .btn:hover{
+            background-color: #EDBB00;
+            color: white;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            display: block;
+            padding: 10px;
+        }
+    </style>
 </head>
-<body>
-    <div>
-        <form action="" name="signup">
-            <input type="text" name="name" id="1">
-            <input type="email" name="email" id="2">
+<body ng-app="">
+    <div class="header">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li style="float: right;"><a href="signup.html">Register</a></li>
+        <li style="float: right;"><a href="login.html">Login</a></li>
+    </ul>
+    <!-- <h1 style="text-align: center;">Welcome to Football Fantasy</h1> -->
+    </div>
+    <hr>
+    <div class="register">
+        <h1>Signup/Register Here</h1>
+        <table>
+            <form action="/login.html" name="signup" onsubmit="return validate()">
+            <tr>
+                <td>
+                    <label for="1">Enter Name: </label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="1" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="2">Enter Email: </label>
+                </td>
+                <td>
+                    <input type="email" name="email" id="2" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="3">Enter Password: </label>
+                </td>
+                <td>
+                    <input type="password" name="pwd" id="3" required ng-model="pwd1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="4">Re-enter Password: </label>
+                </td>
+                <td>
+                    <input type="password" name="pwd2" id="4" required ng-model="pwd2">
+                </td>
+            </tr>
+            <tr>
+                <td><span ng-show="pwd1 != pwd2">Passwords are not matching.</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="5">Enter Age: </label>
+                </td>
+                <td>
+                    <input type="number" name="age" id="5" required>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit" name="submit" id="3" class="btn">
         </form>
     </div>
 </body>
