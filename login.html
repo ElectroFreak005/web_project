@@ -10,19 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Login</title>
     <script type="text/javascript">
         function validate(){
-            var cond = true;
+            // var cond = true;
             var passele=document.getElementById("2");
+            console.log(passele.value)
             var re=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+~`|}{[\]\\:;'<>,.?\/])(?!.*\s).{8,}$/;
             if((!re.test(passele.value))){
                 alert('Password should be atleast 8 characters.\nMust have an lowercase, uppercase and a special character.');
-                cond = false;
-            }
-            else if(cond == true)
-            {
-                document.getElementsByTagName("body").scope.pass();
+                // cond = false;
             }
         }
 
@@ -47,7 +44,7 @@
             font-family: "League Spartan";
             background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
             background-repeat: no-repeat;
-            height: 100vh;
+            height: 99vh;
         }
         .login{
             text-align: center;

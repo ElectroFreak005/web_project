@@ -10,6 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
     <title>Register</title>
+    <script type="text/javascript">
+        function validate(){
+            var passele=document.getElementById("3");
+            var re=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+~`|}{[\]\\:;'<>,.?\/])(?!.*\s).{8,}$/;
+            // console.log();
+            if((!re.test(passele.value))){
+                alert('Password should be atleast 8 characters.\nMust have an lowercase, uppercase and a special character.');
+                // cond = false;
+            }
+            else{
+                alert("Registered Successfully.");
+            }
+        }
+    </script>
     <style>
         *{
             margin: 0;

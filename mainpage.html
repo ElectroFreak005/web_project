@@ -29,7 +29,7 @@
             font-family: "Bebas Neue";
             font-size: large;
             background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-            background-repeat: no-repeat;
+            /* background-repeat: no-repeat; */
             height: 100vh;
         }
         ul{
@@ -72,15 +72,32 @@
     <div class="header">
     <ul>
         <li><a href="/">Home</a></li>
-        <li style="float: right;"><a href="signup.html">Register</a></li>
-        <li style="float: right;"><a href="">Login</a></li>
+        <li><svg height="50" width="200">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="50%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="30" rx="55" ry="55" fill="url(#grad1)" />
+            <text fill="#ffffff" font-size="25" font-family="Verdana" x="45" y="35">Fantasy</text>
+            Sorry, your browser does not support inline SVG.
+          </svg></li>
+        <!-- <li style="float: right;"><a href="signup.html">Register</a></li> -->
+        <li style="float: right;"><a href="login.html" onclick="con(this)">sign out</a></li>
     </ul>
     <!-- <h1 style="text-align: center;">Welcome to Football Fantasy</h1> -->
     </div>
     <hr>
     <h1 style="text-align: center; margin: auto;">Welcome to Football Fantasy</h1>
     <h2 style="text-align: center; margin: auto;">Select Your Team!!</h2>
+    <svg width="100" height="100" style="display: block; margin:auto;">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+    </svg>
     <p style="text-align: center; margin: auto;">With 70M Budget initially, choose your fantasy team wisely!!.</p>
+    <svg width="100" height="100" style="display: block; margin:auto;">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="blue"/>
+    </svg>
     <div>
         <table>
             <tr>
@@ -181,6 +198,13 @@
     </div>
     <h1 style="text-align: center; margin: auto;">Avaliable Budget : {{(budget-gk-lb-cb1-cb2-rb-cm1-dm-cm2-lw-st-rw).toFixed(2)}}</h1>
     <script>
+        var con = function(x){
+            var val = confirm("Do yo want to sign out?");
+            if(val != true)
+            {
+                x.href="mainpage.html";
+            }
+        }
         var app = angular.module("myApp",[]);
         app.controller("myCtrl",function($scope){
             $scope.budget = 70;
