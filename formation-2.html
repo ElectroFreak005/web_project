@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td colspan="5"><span>G K</span><br>
+                    <select name="gk" id="1" ng-model="gk">
+                        <option ng-repeat="x in goalkeeper" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><span>R B</span><br>
+                    <select name="rb" id="1" ng-model="rb">
+                        <option ng-repeat="x in goalkeeper" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                    </select>
+                </td>
+                <td><span>C B</span><br>
+                    <select name="cb1" id="1" ng-model="cb1">
+                        <option ng-repeat="x in centerback" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                    </select>
+                </td>
+                <td style="border: none;"></td>
+                <td><span>C B</span><br>
+                    <select name="cb2" id="1" ng-model="cb2">
+                        <option ng-repeat="x in centerback1" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                    </select>
+                </td>
+                <td><span>L B</span><br>
+                    <select name="lb" id="1" ng-model="lb">
+                        <option ng-repeat="x in leftback" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>C M</span><br>
+                    <select name="cm1" id="1" ng-model="cm1">
+                        <option value="5.4" selected>Allison</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                    </select>
+                </td>
+                <td colspan="1"><span>D M</span><br>
+                    <select name="dm" id="1" ng-model="dm">
+                        <option value="5.4" selected>Allison</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                    </select>
+                </td>
+                <td colspan="2"><span>C M</span><br>
+                    <select name="cm2" id="1" ng-model="cm2">
+                        <option value="5.4" selected>Allison</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><span>R W</span><br>
+                    <select name="rw" id="1" ng-model="rw">
+                        <option value="5.4" selected>Allison</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                    </select>
+                </td>
+                <td colspan="1"><span>S T / C F</span><br>
+                    <select name="st" id="1" ng-model="st">
+                        <option value="5.4" selected>Allison</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                    </select>
+                </td>
+                <td colspan="2"><span>L W</span><br>
+                    <select name="lw" id="1" ng-model="lw">
+                        <option value="5.4" selected>Allison</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                        <option value="5.3">Ederson</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
