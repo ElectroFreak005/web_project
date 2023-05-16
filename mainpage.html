@@ -19,18 +19,13 @@
             height: 50px;
             font-size: large;
             padding: 10px;
-            /* background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
         }
         body{
-            /* display: flex;
-            flex-direction: column; */
-            /* justify-content: space-around; */
             background-color: #004D98;
             color: rgb(12, 3, 3);
             font-family: "Bebas Neue";
             font-size: large;
             background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-            /* background-repeat: no-repeat; */
             height: 100vh;
         }
         ul{
@@ -85,7 +80,9 @@
     </style>
 </head>
 <body ng-app="myApp" ng-controller="myCtrl">
+
     <div class="header">
+
     <ul>
         <li><a href="/">Home</a></li>
         <li><svg height="50" width="200">
@@ -99,21 +96,26 @@
             <text fill="#ffffff" font-size="25" font-family="Verdana" x="45" y="35">Fantasy</text>
             Sorry, your browser does not support inline SVG.
           </svg></li>
-        <!-- <li style="float: right;"><a href="signup.html">Register</a></li> -->
         <li style="float: right;"><a href="login.html" onclick="con(this)">sign out</a></li>
     </ul>
-    <!-- <h1 style="text-align: center;">Welcome to Football Fantasy</h1> -->
+    
     </div>
+
     <hr>
+
     <h1 style="text-align: center; margin: auto;">Welcome to Football Fantasy</h1>
     <h2 style="text-align: center; margin: auto;">Select Your Team!!</h2>
+
     <svg width="100" height="100" style="display: block; margin:auto;">
         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
     </svg>
+
     <p style="text-align: center; margin: auto;">With 70M Budget initially, choose your fantasy team wisely!!.</p>
+
     <svg width="100" height="100" style="display: block; margin:auto;">
         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="blue"/>
     </svg>
+
     <div class="formation"> 
         Choose a Formation
         <select ng-model="formation">
@@ -121,6 +123,7 @@
         <option value="4-2-1-3">4-2-1-3
     </select>  
     </div>
+
     <div ng-switch="formation">    
     <div ng-switch-when="4-3-3">
         <table>
@@ -134,7 +137,7 @@
             <tr>
                 <td><span>R B</span><br>
                     <select name="rb" id="1" ng-model="rb">
-                        <option ng-repeat="x in goalkeeper" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                        <option ng-repeat="x in rightback" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td><span>C B</span><br>
@@ -230,6 +233,9 @@
         <input style="height: 25px;" type="name" name="name" id="name" ng-model="sname">
         <h1>{{sname}}</h1>
         <table>
+            <tr>
+                <th colspan="4">Top Football Player Details</th>
+            </tr>
             <tr ng-repeat="x in playerlist | filter : search_name">
                 <td>{{x.sno}}</td>
                 <td>{{x.name}}</td>
