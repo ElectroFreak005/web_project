@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        .video-player-container {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        .video-player {
+          width: 100%;
+          height: auto;
+          border: none;
+          outline: none;
+        }
+        
+        .controls-container {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+        }
+        
+        .control-button {
+          margin-right: 10px;
+          padding: 10px 20px;
+          font-size: 16px;
+          color: #fff;
+          background-color: #007bff;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+        
+        .time-label {
+          margin: 0;
+          font-size: 14px;
+          color: #666;
+        }
+        html {
+            text-align: center;
+        }
+        .header{
+            height: 50px;
+            font-size: large;
+            padding: 10px;
+            /* background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+        }
+        body{
+            /* display: flex;
+            flex-direction: column; */
+            /* justify-content: space-around; */
+            background-color: #004D98;
+            color: rgb(12, 3, 3);
+            font-family: "Bebas Neue";
+            font-size: large;
+            background: linear-gradient(135deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+            /* background-repeat: no-repeat; */
+            height: 100vh;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            display: block;
+            padding: 10px;
+        }
+        textarea {
+            width: 50%;
+            /* display: block; */
+            height: 200px;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="header">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li style="float: right;"><a href="signup.html">Signup</a></li>
+            <li style="float: right;"><a href="login.html">Login</a></li>
+        </ul>
+        <!-- <h1 style="text-align: center;">Welcome to Football Fantasy</h1> -->
+        </div>
+        <hr>
+
+    <h1 style="text-align: center; margin: auto;">Welcome to Football Fantasy</h1>
+    <h1 style="text-align: center; margin: auto;">Feel Free to drop down your comments below</h1>
+    <div>
+        <form action="" style="text-align: center;">
+            <textarea ng-model="text" id="textArea"></textarea>
+            <br>
+            <button ng-click="clear()">Clear</button>
+            <button ng-click="save()">Save</button>
+            <button ng-click="cut()">Cut</button>
+            <button ng-click="copy()">Copy</button>
+            <button ng-click="paste()">Paste</button>
+            <input type="file" id="fileInput" ng-model="fileContent" onchange="angular.element(this).scope().openFile()" />
+            <br>
+            <div ng-if="savedText.length > 0">
+                <h2>Saved Text:</h2>
+                <p>{{ savedText }}</p>
+            </div>
+            <br>
+            <input type="submit" name="Submit" id="submit">
+        </form>
+    </div>
+    <div class="video-player-container">
+    <video id="videoPlayer" ng-src="video.mp4" controls
+           ng-play="{{ playing }}" ng-pause="{{ !playing }}"
+           ng-timeupdate="updateCurrentTime()" ng-durationchange="updateDuration()"
+           class="video-player">
+      Your browser does not support the video tag.
+    </video>
+    <div class="controls-container">
+      <button ng-click="play()" class="control-button">Play</button>
+      <button ng-click="pause()" class="control-button">Pause</button>
+      <button ng-click="stop()" class="control-button">Stop</button>
+    </div>
+</div>
+  </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope) {
+            $scope.text = "";
+            $scope.savedText = "";
+            
+            $scope.clear = function () {
+                $scope.text = "";
+            };
+            $scope.save = function () {
+                $scope.savedText = $scope.text;
+                var blob = new Blob([$scope.savedText], {type: "text/plain;charset=utf-8"});
+                saveAs(blob, "myTextFile.txt");
+            };
+            $scope.cut = function () {
+                var textArea = document.getElementById("textArea");
+                textArea.focus();
+                document.execCommand("cut");
+            };
+            $scope.copy = function () {
+                var textArea = document.getElementById("textArea");
+                textArea.focus();
+                document.execCommand("copy");
+            };
+            $scope.paste = function () {
+                var textArea = document.getElementById("textArea");
+                textArea.focus();
+                document.execCommand("paste");
+            };
+            $scope.openFile = function () {
+                var file = document.getElementById("fileInput").files[0];
+                var reader = new FileReader();
+                reader.onload = function (event) {
+                    $scope.text = event.target.result;
+                    $scope.$apply();
+                };
+                reader.readAsText(file);
+            };
+        });
+    </script>
+</body>
+</html>
