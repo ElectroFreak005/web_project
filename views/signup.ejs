@@ -13,11 +13,9 @@
     <script type="text/javascript">
         function validate(){
             var passele=document.getElementById("3");
-            var re=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+~`|}{[\]\\:;'<>,.?\/])(?!.*\s).{8,}$/;
-            // console.log();
+            var re=/^.{8,}$/;
             if((!re.test(passele.value))){
-                alert('Password should be atleast 8 characters.\nMust have an lowercase, uppercase and a special character.');
-                // cond = false;
+                alert('Password should be atleast 8 characters.');
             }
             else{
                 alert("Registered Successfully.");
@@ -115,7 +113,7 @@
     <div class="register">
         <h1>Signup/Register Here</h1>
         <table>
-            <form action="/login" name="signup" onsubmit="return validate()">
+            <form action="/signup" name="signup" onsubmit="return validate()" method="post">
             <tr>
                 <td>
                     <label for="1">Enter Name: </label>
