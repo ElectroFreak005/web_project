@@ -1,0 +1,463 @@
+[{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c5d"
+  },
+  "name": "Allison",
+  "value": 5.4,
+  "position": "Goalkeeper"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c5e"
+  },
+  "name": "Ederson",
+  "value": 5.4,
+  "position": "Goalkeeper"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c5f"
+  },
+  "name": "Nick Pope",
+  "value": 5.4,
+  "position": "Goalkeeper"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c60"
+  },
+  "name": "Emiliano Martinez",
+  "value": 5,
+  "position": "Goalkeeper"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c61"
+  },
+  "name": "De Gea",
+  "value": 5,
+  "position": "Goalkeeper"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c62"
+  },
+  "name": "Lloris",
+  "value": 5.4,
+  "position": "Goalkeeper"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c63"
+  },
+  "name": "Trent Alexander-Arnold",
+  "value": 6.4,
+  "position": "Right Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c64"
+  },
+  "name": "Achraf Hakimi",
+  "value": 5.8,
+  "position": "Right Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c65"
+  },
+  "name": "Reece James",
+  "value": 5.6,
+  "position": "Right Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c66"
+  },
+  "name": "Kyle Walker",
+  "value": 5.4,
+  "position": "Right Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c67"
+  },
+  "name": "Dani Carvajal",
+  "value": 5.3,
+  "position": "Right Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c68"
+  },
+  "name": "Kieran Trippier",
+  "value": 5.2,
+  "position": "Right Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c69"
+  },
+  "name": "Giorgio Chiellini",
+  "value": 7,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c6a"
+  },
+  "name": "Marquinhos",
+  "value": 6.8,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c6b"
+  },
+  "name": "Milan Škriniar",
+  "value": 6.5,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c6c"
+  },
+  "name": "Presnel Kimpembe",
+  "value": 6.2,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c6d"
+  },
+  "name": "Diego Carlos",
+  "value": 6,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c6e"
+  },
+  "name": "Matthijs de Ligt",
+  "value": 5.8,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c6f"
+  },
+  "name": "Virgil van Dijk",
+  "value": 6.6,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c70"
+  },
+  "name": "Rúben Dias",
+  "value": 6,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c71"
+  },
+  "name": "Aymeric Laporte",
+  "value": 5.6,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c72"
+  },
+  "name": "Lisandro Martínez",
+  "value": 5,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c73"
+  },
+  "name": "Joel Matip",
+  "value": 5.9,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c74"
+  },
+  "name": "John Stones",
+  "value": 5.5,
+  "position": "Center Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c75"
+  },
+  "name": "Andy Robertson",
+  "value": 6.8,
+  "position": "Left Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c76"
+  },
+  "name": "Oleksandr Zinchenko",
+  "value": 5.2,
+  "position": "Left Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c77"
+  },
+  "name": "Joao Cancelo",
+  "value": 7.1,
+  "position": "Left Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c78"
+  },
+  "name": "Luke Shaw",
+  "value": 5.1,
+  "position": "Left Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c79"
+  },
+  "name": "Aaron Cresswell",
+  "value": 4.7,
+  "position": "Left Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c7a"
+  },
+  "name": "Ben Chilwell",
+  "value": 5.9,
+  "position": "Left Back"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c7b"
+  },
+  "name": "Kevin De Bruyne",
+  "value": 7.2,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c7c"
+  },
+  "name": "N'Golo Kanté",
+  "value": 6.5,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c7d"
+  },
+  "name": "Frenkie de Jong",
+  "value": 6,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c7e"
+  },
+  "name": "Luka Modrić",
+  "value": 5.8,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c7f"
+  },
+  "name": "Bruno Fernandes",
+  "value": 5.6,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c80"
+  },
+  "name": "Sergio Busquets",
+  "value": 5.4,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c81"
+  },
+  "name": "Casemiro",
+  "value": 6.2,
+  "position": "Defensive Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c82"
+  },
+  "name": "Joshua Kimmich",
+  "value": 6,
+  "position": "Defensive Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c83"
+  },
+  "name": "Rodri",
+  "value": 5.7,
+  "position": "Defensive Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c84"
+  },
+  "name": "Fabinho",
+  "value": 5.6,
+  "position": "Defensive Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c85"
+  },
+  "name": "Declan Rice",
+  "value": 5.4,
+  "position": "Defensive Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c86"
+  },
+  "name": "Wilfred Ndidi",
+  "value": 5.2,
+  "position": "Defensive Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c87"
+  },
+  "name": "Paul Pogba",
+  "value": 7,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c88"
+  },
+  "name": "Toni Kroos",
+  "value": 6.8,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c89"
+  },
+  "name": "Christian Eriksen",
+  "value": 6.5,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c8a"
+  },
+  "name": "Miralem Pjanić",
+  "value": 6.2,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c8b"
+  },
+  "name": "Isco",
+  "value": 6,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c8c"
+  },
+  "name": "Saul Niguez",
+  "value": 5.8,
+  "position": "Center Mid"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c8d"
+  },
+  "name": "Lionel Messi",
+  "value": 9.5,
+  "position": "Right Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c8e"
+  },
+  "name": "Mohamed Salah",
+  "value": 8,
+  "position": "Right Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c8f"
+  },
+  "name": "Jadon Sancho",
+  "value": 7.2,
+  "position": "Right Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c90"
+  },
+  "name": "Raheem Sterling",
+  "value": 6.8,
+  "position": "Right Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c91"
+  },
+  "name": "Angel Di María",
+  "value": 6.5,
+  "position": "Right Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c92"
+  },
+  "name": "Bernardo Silva",
+  "value": 6,
+  "position": "Right Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c93"
+  },
+  "name": "Robert Lewandowski",
+  "value": 8.5,
+  "position": "Center Forward"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c94"
+  },
+  "name": "Karim Benzema",
+  "value": 7.5,
+  "position": "Center Forward"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c95"
+  },
+  "name": "Erling Haaland",
+  "value": 7,
+  "position": "Center Forward"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c96"
+  },
+  "name": "Harry Kane",
+  "value": 6.8,
+  "position": "Center Forward"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c97"
+  },
+  "name": "Romelu Lukaku",
+  "value": 6.5,
+  "position": "Center Forward"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c98"
+  },
+  "name": "Cristiano Ronaldo",
+  "value": 6.2,
+  "position": "Center Forward"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c99"
+  },
+  "name": "Neymar",
+  "value": 8,
+  "position": "Left Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c9a"
+  },
+  "name": "Sadio Mané",
+  "value": 7.2,
+  "position": "Left Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c9b"
+  },
+  "name": "Marcus Rashford",
+  "value": 6.5,
+  "position": "Left Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c9c"
+  },
+  "name": "Leroy Sané",
+  "value": 6,
+  "position": "Left Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c9d"
+  },
+  "name": "Gareth Bale",
+  "value": 5.8,
+  "position": "Left Wing"
+},{
+  "_id": {
+    "$oid": "64660dd24a0e6b13e4cb1c9e"
+  },
+  "name": "Heung-Min Son",
+  "value": 5.6,
+  "position": "Left Wing"
+}]

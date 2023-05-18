@@ -103,7 +103,7 @@
 
     <hr>
 
-    <h1 style="text-align: center; margin: auto;">Welcome to Football Fantasy</h1>
+    <h1 style="text-align: center; margin: auto;">Welcome to Football Fantasy <%= user.name %> <%= user._id %></h1>
     <h2 style="text-align: center; margin: auto;">Select Your Team!!</h2>
 
     <svg width="100" height="100" style="display: block; margin:auto;">
@@ -116,118 +116,99 @@
         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="blue"/>
     </svg>
 
-    <div class="formation"> 
+    <!-- <div class="formation"> 
         Choose a Formation
         <select ng-model="formation">
-        <option value="4-3-3">4-3-3
+        <option value="4-3-3" selected>4-3-3
         <option value="4-2-1-3">4-2-1-3
     </select>  
-    </div>
+    </div> -->
 
-    <div ng-switch="formation">    
-    <div ng-switch-when="4-3-3">
+    <!-- <div ng-switch="formation">    
+    <div ng-switch-when="4-3-3"> -->
+        <form action="/submit" method="post">
         <table>
             <tr>
                 <td colspan="5"><span>G K</span><br>
                     <select name="gk" id="1" ng-model="gk">
-                        <option ng-repeat="x in goalkeeper" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                        <option ng-repeat="x in goalkeeper" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td><span>R B</span><br>
                     <select name="rb" id="1" ng-model="rb">
-                        <option ng-repeat="x in rightback" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                        <option ng-repeat="x in rightback" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td><span>C B</span><br>
                     <select name="cb1" id="1" ng-model="cb1">
-                        <option ng-repeat="x in centerback" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                        <option ng-repeat="x in centerback" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td style="border: none;"></td>
                 <td><span>C B</span><br>
                     <select name="cb2" id="1" ng-model="cb2">
-                        <option ng-repeat="x in centerback1" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                        <option ng-repeat="x in centerback1" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td><span>L B</span><br>
                     <select name="lb" id="1" ng-model="lb">
-                        <option ng-repeat="x in leftback" value="{{x.value}}" selected>{{x.name}} - {{x.value}}</option>
+                        <option ng-repeat="x in leftback" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td colspan="2"><span>C M</span><br>
                     <select name="cm1" id="1" ng-model="cm1">
-                        <option value="5.4" selected>Allison</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
+                        <option ng-repeat="x in centermid" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td colspan="1"><span>D M</span><br>
                     <select name="dm" id="1" ng-model="dm">
-                        <option value="5.4" selected>Allison</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
+                        <option ng-repeat="x in defmid" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td colspan="2"><span>C M</span><br>
                     <select name="cm2" id="1" ng-model="cm2">
-                        <option value="5.4" selected>Allison</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
+                        <option ng-repeat="x in centermid1" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td colspan="2"><span>R W</span><br>
                     <select name="rw" id="1" ng-model="rw">
-                        <option value="5.4" selected>Allison</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
+                        <option ng-repeat="x in rightwing" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td colspan="1"><span>S T / C F</span><br>
                     <select name="st" id="1" ng-model="st">
-                        <option value="5.4" selected>Allison</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
+                        <option ng-repeat="x in centerforward" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
                 <td colspan="2"><span>L W</span><br>
                     <select name="lw" id="1" ng-model="lw">
-                        <option value="5.4" selected>Allison</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
-                        <option value="5.3">Ederson</option>
+                        <option ng-repeat="x in leftwing" value="{{x}}" selected>{{x.name}} - {{x.value}}</option>
                     </select>
                 </td>
             </tr>
         </table>
-    </div>
-    <div ng-switch-when="4-2-1-3">
+        <br>
+        <div style="text-align: center; margin: auto;" >
+            <input type="submit" value="Submit Team">
+        </div>
+    </form>
+    <!-- </div> -->
+    <!-- <div ng-switch-when="4-2-1-3">
         <formation2></formation2>
-    </div>
-</div>
-    <h1 style="text-align: center; margin: auto;">Avaliable Budget : {{(budget-gk-lb-cb1-cb2-rb-cm1-dm-cm2-lw-st-rw).toFixed(2)}}</h1>
+    </div> -->
+<!-- </div> -->
+    {{gk.value}}
+    <h1 style="text-align: center; margin: auto;">Avaliable Budget : {{(budget-(gk.value)).toFixed(2)}}</h1>
+    
+    <br>
+    <hr>
+    <br>
     <div style="margin: auto; text-align: center;">
         <label for="name">Search For player: Enter Name: </label>
         <input style="height: 25px;" type="name" name="name" id="name" ng-model="sname">
@@ -236,11 +217,15 @@
             <tr>
                 <th colspan="4">Top Football Player Details</th>
             </tr>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Value</th>
+            </tr>
             <tr ng-repeat="x in playerlist | filter : search_name">
-                <td>{{x.sno}}</td>
                 <td>{{x.name}}</td>
-                <td>{{x.nationality}}</td>
-                <td>{{x.club}}</td>
+                <td>{{x.position}}</td>
+                <td>{{x.value}}</td>
             </tr>
         </table>
     </div>
@@ -253,11 +238,12 @@
             }
         }
         var app = angular.module("myApp",[]);
-        
-        app.component("formation2",{
-            templateUrl:"formation-2.html",
-        })
-        app.controller("myCtrl",function($scope){
+        app.controller("myCtrl",function($scope,$http){
+            $scope.playerlist=[{}]
+            $http.get("/playerlist").then(function (response) {
+                console.log(response.data);
+                $scope.playerlist = response.data;
+            });
             $scope.sname = '';
             $scope.search_name = function(x){
                 if($scope.sname === '' || !$scope.sname)
@@ -270,75 +256,31 @@
                 console.log("calling update func");
                 $scope.search_name = search_name;
             };
-            $scope.playerlist = [
-                {sno:"1",name:"Lionel Messi",nationality:"Argentina",club:"Paris-saint-germain",img:"french-ligue1/paris-saint-germain.png"},
-                {sno:"2",name:"Cristiano Ronaldo",nationality:"Portugal",club:"Manchester United",img:"english-premier-league/manchester-united.png"},
-                {sno:"3",name:"Neymar Jr.",nationality:"Brazil",club:"Paris-saint-germain",img:"french-ligue1/paris-saint-germain.png"},
-                {sno:"4",name:"Robert Lewandowski",nationality:"Poland",club:"Bayern Munich",img:"german-bundesliga/bayern-munich.png"},
-                {sno:"5",name:"Kevin De Bruyne",nationality:"Belgium",club:"Manchester City",img:"english-premier-league/manchester-city.png"},
-                {sno:"6",name:"Kylian Mbappé",nationality:"France",club:"Paris-saint-germain",img:"french-ligue1/paris-saint-germain.png"},
-                {sno:"7",name:"Mohamed Salah",nationality:"Egypt",club:"Liverpool",img:"english-premier-league/liverpool.png"},
-                {sno:"8",name:"Jan Oblak",nationality:"Slovenia",club:"Atletico Madrid",img:"spanish-la-liga/atletico-madrid.png"},
-                {sno:"9",name:"Erling Haaland",nationality:"Norway",club:"Borussia Dortmund",img:"german-bundesliga/borussia-dortmund.png"},
-                {sno:"10",name:"Gianluigi Donnarumma",nationality:"Italy",club:"Paris-saint-germain",img:"french-ligue1/paris-saint-germain.png"},
-                {sno:"11",name:"Bruno Fernandes",nationality:"Portugal",club:"Manchester United",img:"english-premier-league/manchester-united.png"},
-                {sno:"12",name:"Sadio Mane",nationality:"Senegal",club:"Liverpool",img:"english-premier-league/liverpool.png"},
-                {sno:"13",name:"Harry Kane",nationality:"England",club:"Tottenham Hotspur",img:"english-premier-league/tottenham-hotspur.png"},
-                {sno:"14",name:"Romelu Lukaku",nationality:"Belgium",club:"Chelsea",img:"english-premier-league/chelsea.png"},
-                {sno:"15",name:"Antoine Griezmann",nationality:"France",club:"Barcelona",img:"spanish-la-liga/barcelona.png"},
-                {sno:"16",name:"Luis Suarez",nationality:"Uruguay",club:"Atletico Madrid",img:"spanish-la-liga/atletico-madrid.png"},
-                {sno:"17",name:"Riyad Mahrez",nationality:"Algeria",club:"Manchester City",img:"english-premier-league/manchester-city.png"},
-                {sno:"18",name:"Virgil van Dijk",nationality:"Netherlands",club:"Liverpool",img:"english-premier-league/liverpool.png"},
-                {sno:"19",name:"Edinson Cavani",nationality:"Uruguay",club:"Manchester United",img:"english-premier-league/manchester-united.png"},
-                {sno:"20",name:"Frenkie de Jong",nationality:"Netherlands",club:"Barcelona",img:"spanish-la-liga/barcelona.png"},
-                {sno:"21",name:"Karim Benzema",nationality:"France",club:"Real Madrid",img:"spanish-la-liga/real-madrid.png"},
-                {sno:"22",name:"Phil Foden",nationality:"England",club:"Manchester City",img:"english-premier-league/manchester-city.png"},
-                {sno:"23",name:"Joshua Kimmich",nationality:"Germany",club:"Bayern Munich",img:"german-bundesliga/bayern-munich.png"},
-                {sno:"24",name:"Bernardo Silva",nationality:"Portugal",club:"Manchester City",img:"english-premier-league/manchester-city.png"},
-                {sno:"25",name:"Joao Cancelo",nationality:"Portugal",club:"Manchester City",img:"english-premier-league/manchester-city.png"},
-                {sno:"26",name:"Thibaut Courtois",nationality:"Belgium",club:"Real Madrid",img:"spanish-la-liga/real-madrid.png"},
-                {sno:"27",name:"N'Golo Kante",nationality:"France",club:"Chelsea",img:"english-premier-league/chelsea.png"},
-                {sno:"28",name:"Raheem Sterling",nationality:"England",club:"Manchester City",img:"english-premier-league/manchester-city.png"},
-                {sno:"29",name:"Paul Pogba",nationality:"France",club:"Manchester United",img:"english-premier-league/manchester-united.png"},
-                {sno:"30",name:"Jadon Sancho",nationality:"England",club:"Manchester United",img:"english-premier-league/manchester-united.png"}
-            ];
-            $scope.budget = 70;
-            $scope.gk='0';
-            $scope.lb='0';
-            $scope.cb1='0';
-            $scope.cb2='0';
-            $scope.rb='0';
-            $scope.cm1='0';
-            $scope.dm='0';
-            $scope.cm2='0';
-            $scope.lw='0';
-            $scope.st='0';
-            $scope.rw='0';
             
-            $scope.gk=parseFloat($scope.gk);
-            $scope.lb=parseFloat($scope.lb);
-            $scope.cb1=parseFloat($scope.cb1);
-            $scope.cb2=parseFloat($scope.cb2);
-            $scope.rb=parseFloat($scope.rb);
-            $scope.cm1=parseFloat($scope.cm1);
-            $scope.dm=parseFloat($scope.dm);
-            $scope.cm2=parseFloat($scope.cm2);
-            $scope.lw=parseFloat($scope.lw);
-            $scope.st=parseFloat($scope.st);
-            $scope.rw=parseFloat($scope.rw);
+            $scope.budget = 70;
+            $scope.gk={name:"",value:0.0};
+            $scope.lb={name:"",value:0.0};
+            $scope.cb1={name:"",value:0.0};
+            $scope.cb2={name:"",value:0.0};
+            $scope.rb={name:"",value:0.0};
+            $scope.cm1={name:"",value:0.0};
+            $scope.dm={name:"",value:0.0};
+            $scope.cm2={name:"",value:0.0};
+            $scope.lw={name:"",value:0.0};
+            $scope.st={name:"",value:0.0};
+            $scope.rw={name:"",value:0.0};
 
             $scope.goalkeeper = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            $scope.rightback = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
+            $scope.rightback = [{ name: "Trent Alexander-Arnold", value: 6.4 },{ name: "Achraf Hakimi", value: 5.8 },{ name: "Reece James", value: 5.6 },{ name: "Kyle Walker", value: 5.4 },{ name: "Dani Carvajal", value: 5.3 },{ name: "Kieran Trippier", value: 5.2 }]
+            $scope.centerback1 = [{ name: "Giorgio Chiellini", value: 7.0 },{ name: "Marquinhos", value: 6.8 },{ name: "Milan Škriniar", value: 6.5 },{ name: "Presnel Kimpembe", value: 6.2 },{ name: "Diego Carlos", value: 6.0 },{ name: "Matthijs de Ligt", value: 5.8 }];
             $scope.centerback = [{name:"Virgil van Dijk",value:6.6},{name:"Rúben Dias",value:6.0},{name:"Aymeric Laporte",value:5.6},{name:"Lisandro Martínez",value:5.0},{name:"Joel Matip",value:5.9},{name:"John Stones",value:5.5},]
-            $scope.centerback1 = [{name:"Kalidou Koulibaly",value:5.5},{name:"Nathan Aké",value:5.1},{name:"Gabriel Magalhães",value:5.3},{name:"Manuel Akanji",value:5.0},{name:"Cristian Romero",value:4.9}]
             $scope.leftback = [{name:"Andy Robertson",value:6.8},{name:"Oleksandr Zinchenko",value:5.2},{name:"Joao Cancelo",value:7.1},{name:"Luke Shaw",value:5.1},{name:"Aaron Cresswell",value:4.7},{name:"Ben Chilwell",value:5.9},]
-            $scope.centermid = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            $scope.defmid = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            $scope.centermid1 = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            $scope.rightwing = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            $scope.centerforward = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            $scope.leftwing = [{name:"Allison",value:5.4},{name:"Ederson",value:5.4},{name:"Nick Pope",value:5.4},{name:"Emiliano Martinez",value:5.0},{name:"De Gea",value:5.0},{name:"Lloris",value:5.4},]
-            // $scope.rem = budget - gk-lb-cb1-cb2-rb-cm1-dm-cm2-lw-st-rw;
+            $scope.centermid = [{ name: "Kevin De Bruyne", value: 7.2 },{ name: "N'Golo Kanté", value: 6.5 },{ name: "Frenkie de Jong", value: 6.0 },{ name: "Luka Modrić", value: 5.8 },{ name: "Bruno Fernandes", value: 5.6 },{ name: "Sergio Busquets", value: 5.4 }];
+            $scope.defmid = [{ name: "Casemiro", value: 6.2 },{ name: "Joshua Kimmich", value: 6.0 },{ name: "Rodri", value: 5.7 },{ name: "Fabinho", value: 5.6 },{ name: "Declan Rice", value: 5.4 },{ name: "Wilfred Ndidi", value: 5.2 }];
+            $scope.centermid1 = [{ name: "Paul Pogba", value: 7.0 },{ name: "Toni Kroos", value: 6.8 },{ name: "Christian Eriksen", value: 6.5 },{ name: "Miralem Pjanić", value: 6.2 },{ name: "Isco", value: 6.0 },{ name: "Saul Niguez", value: 5.8 }];
+            $scope.rightwing = [{ name: "Lionel Messi", value: 9.5 },{ name: "Mohamed Salah", value: 8.0 },{ name: "Jadon Sancho", value: 7.2 },{ name: "Raheem Sterling", value: 6.8 },{ name: "Angel Di María", value: 6.5 },{ name: "Bernardo Silva", value: 6.0 }];
+            $scope.centerforward = [{ name: "Robert Lewandowski", value: 8.5 },{ name: "Karim Benzema", value: 7.5 },{ name: "Erling Haaland", value: 7.0 },{ name: "Harry Kane", value: 6.8 },{ name: "Romelu Lukaku", value: 6.5 },{ name: "Cristiano Ronaldo", value: 6.2 }];
+            $scope.leftwing = [{ name: "Neymar", value: 8.0 },{ name: "Sadio Mané", value: 7.2 },{ name: "Marcus Rashford", value: 6.5 },{ name: "Leroy Sané", value: 6.0 },{ name: "Gareth Bale", value: 5.8 },{ name: "Heung-Min Son", value: 5.6 }];
         })
     </script>
 </body>
